@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Close } from './CloseBtn';
 
 export function Header() {
-  const [isActive, setIsActive] = useState(true)
+  const [isActive, setIsActive] = useState(false)
 
   function changeVisibilyMenu() {
     setIsActive((state) => !state);
@@ -15,22 +15,21 @@ export function Header() {
       <Styled.Content>
         <img src={logoSvg} alt="easy bank" />
       
-        <Styled.Card isOpen={isActive}>
-          <p>Home</p>
-          <p>About</p>
-          <p>Contact</p>
-          <p>Blog</p>
-          <p>Careers</p>
-        </Styled.Card>
-        
-        <Styled.Menu 
-          onClick={changeVisibilyMenu}
-        >
-          <Close isActive={isActive} />       
+        <Styled.Menu isOpen={isActive}>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
         </Styled.Menu>
+        
+        <Close  
+          isActive={isActive}
+          onClick={changeVisibilyMenu}
+        />       
       </Styled.Content>
 
-      <Styled.Modal />
+      {/* <Styled.Modal /> */}
     </Styled.Container>
   )
 }
