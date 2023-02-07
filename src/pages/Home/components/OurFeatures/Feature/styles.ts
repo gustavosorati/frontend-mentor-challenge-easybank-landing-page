@@ -1,8 +1,11 @@
+import {motion} from 'framer-motion'
+
+
 import styled from "styled-components";
 import { Heading as HeadingComponent } from "../../../../../components/Heading";
 import { Text as TextComponent } from "../../../../../components/Text";
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
