@@ -4,7 +4,9 @@ interface Props {
   size?: string;
 }
 
-export const Heading = styled.h2<Props>`
+export const Heading = styled.h2.attrs<Props>(({size, ...props}) => ({
+  ['data-aos']: 'slide-left'
+}))<Props>`
   color: #2D2D44;
   margin-bottom: 1rem;
   text-align: center;

@@ -8,7 +8,7 @@ import { Footer } from '../../components/Footer'
 
 export function Home() {
   return (
-    <Styled.Container>
+    <div>
       <Header />
       
       <Hero />
@@ -18,6 +18,7 @@ export function Home() {
       <LatestArticles />
 
       <Footer />
-    </Styled.Container>
+    </div>
+
   )
 }

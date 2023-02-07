@@ -49,6 +49,8 @@ export function LatestArticles() {
             return (
               <Feature 
                 key={feature.id}
+                id={Number(feature.id)}
+                author={feature.author}
                 title={feature.title}
                 description={feature.description}
                 image={feature.image}

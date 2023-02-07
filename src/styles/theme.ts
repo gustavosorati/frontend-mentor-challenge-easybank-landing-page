@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Public Sans', sans-serif;
     font-weight: 400;
+    width: 100%;
   }
 
   a {

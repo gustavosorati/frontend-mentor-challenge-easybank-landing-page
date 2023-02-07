@@ -2,7 +2,7 @@ import styled, { keyframes, css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  position: fixed;
+  position: sticky;
   background-color: #fff;  
   box-shadow: 0px 0 15px -3px rgba(0,0,0,0.4);
   z-index: 100;
@@ -55,14 +55,17 @@ const hide = keyframes`
 export const Menu = styled.div<MenuProps>`
   position: absolute;
   top: calc(100% + 1rem);
-  
+  left: 24px;
+  background: white;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
   border-radius: 6px;
+  
   min-width: 327px;
+  max-width: 327px;
   z-index: 10; 
 
   ${({isOpen}) => isOpen 
@@ -75,7 +78,7 @@ export const Menu = styled.div<MenuProps>`
   }
 
   a {
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   @media (min-width: 376px) {
