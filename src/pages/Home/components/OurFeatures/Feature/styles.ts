@@ -10,6 +10,8 @@ export const Container = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 300px;
+  width: 100%;
 
   img {
     max-width: 68px;
@@ -19,6 +21,7 @@ export const Container = styled(motion.div)`
 
   @media (min-width: 376) {
     align-items: flex-start;
+    
   }
 `
 

@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const Container = styled.footer`
   width: 100%;
   background-color: #2D314E;
-
-  
 `
 
 export const Content = styled.div`
@@ -16,7 +14,7 @@ export const Content = styled.div`
   padding: 2rem;
   padding-bottom: 3rem;
   
-  @media (min-width: 376px) {
+  @media (min-width: 768px) {
     max-width: 1440px;
     margin: 0 auto;
 
@@ -28,7 +26,7 @@ export const Content = styled.div`
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 150px 1fr 1fr;
     column-gap: 10rem;
-  }
+  } 
 `
 
 export const Social = styled.div`
@@ -37,12 +35,8 @@ export const Social = styled.div`
   justify-content: center;
   gap: 12px;
 
-  @media (min-width: 376px) {
+  @media (min-width: 768px) {
     grid-area: social;
-  }
-
-  img:hover {
-    color: red;
   }
 `
 
@@ -54,12 +48,15 @@ export const Nav = styled.nav`
   gap: 12px;
 
   a {
-    all: unset;
     text-align: center;
     color: white;
+
+    &:hover {
+      color: #33D068;
+    }
   }
 
-  @media (min-width: 376px) {
+  @media (min-width: 768px) {
     grid-area: nav;
 
     display: grid;
@@ -72,14 +69,15 @@ export const Nav = styled.nav`
 `
 
 export const End = styled.div`
-  @media (min-width: 376px) {
-    grid-area: end;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+  @media (min-width: 768px) {
+    grid-area: end;
     align-items: end;
     gap: 2rem
-  
   }
 `
