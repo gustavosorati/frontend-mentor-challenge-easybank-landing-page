@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.header`
   width: 100%;
   position: sticky;
   background-color: #fff;  
@@ -15,7 +15,7 @@ export const Content = styled.div`
   padding: 1rem 2rem;
   z-index: 100;
 
-  @media (min-width: 376px) {
+  @media (min-width: 768px) {
     padding: 0;
     max-width: 1440px;
     margin: 0 auto;
@@ -79,19 +79,35 @@ export const Menu = styled.div<MenuProps>`
 
   a {
     padding: 1rem 0;
+    color: #a7a7a7;
   }
 
-  @media (min-width: 376px) {
+  @media (min-width: 768px) {
     position: unset;
     animation: unset;
     flex-direction: row;
     
     a {
+      display: flex;
       border-bottom: 3px solid transparent;
-      padding: 2rem;
-
+      padding: 2rem 0;
+      margin: 0 1.2rem;
+      position: relative;
+      
       &:hover {
-        border-color: red;
+        color: #2D2D44;
+      }
+
+      &:hover::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+
+        width: 100%;
+        height: 3px;
+         background: linear-gradient(90deg, #33D068 0%, #29BACC 100%);;
       }
     }
   }

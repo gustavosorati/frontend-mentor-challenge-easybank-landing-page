@@ -7,6 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 300px;
+  width: 100%;
   
   background-color: #fff;
 
@@ -22,9 +24,11 @@ export const Container = styled.div`
   }
 `
 
-export const Post = styled.div`
+export const Post = styled.a`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: end;
 
   padding: 2rem;
 `
@@ -45,6 +49,10 @@ export const Title = styled(Heading)`
 
   @media (min-width: 376px) {
     font-size: 1.5rem;
+
+    &:hover {
+      color: #33D068;
+    }
   }
 `
 

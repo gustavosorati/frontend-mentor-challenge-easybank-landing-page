@@ -2,13 +2,25 @@ import * as Styled from './styles'
 import logoSvg from '../../assets/logo.svg'
 import { useState } from 'react'
 import { Close } from './CloseBtn';
+import { Button } from '../Button';
 
 export function Header() {
-  const [isActive, setIsActive] = useState(false)
-
+  const [isActive, setIsActive] = useState(false);
+  
   function changeVisibilyMenu() {
     setIsActive((state) => !state);
   }
+
+  const { innerWidth } = window;
+  const [screenWidth, setScreenWidth] = useState(innerWidth > 768 ? true : false);
+
+  function handleResizeScreen() {
+    const { innerWidth } = window;
+    const isDesktop = innerWidth > 768 ? true : false
+    setScreenWidth(isDesktop)
+  }
+
+  window.onresize = handleResizeScreen;
 
   return (
     <Styled.Container>
@@ -23,10 +35,14 @@ export function Header() {
           <a href="#">Careers</a>
         </Styled.Menu>
         
-        <Close  
-          isActive={isActive}
-          onClick={changeVisibilyMenu}
-        />       
+        {screenWidth ? (
+          <Button>Request Invite</Button>
+        ) : (
+          <Close  
+            isActive={isActive}
+            onClick={changeVisibilyMenu}
+          />     
+        )}  
       </Styled.Content>
 
       {/* <Styled.Modal /> */}

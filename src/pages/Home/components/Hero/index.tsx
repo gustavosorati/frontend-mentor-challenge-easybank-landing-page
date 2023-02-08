@@ -4,21 +4,13 @@ import * as Styled from "./styles";
 import mockup from '/image-mockups.png'
 
 export function Hero() {
-  const { innerWidth } = window;
-  const [screenWidth, setScreenWidth] = useState(innerWidth);
-
-  function teste() {
-    const { innerWidth } = window;
-    setScreenWidth(innerWidth)
-  }
-
-  window.onresize = teste;
+  
 
   return (
-    <Styled.Container resolution={screenWidth}>
+    <Styled.Container>
       <img src={mockup} />
 
-      <Styled.Content resolution={screenWidth}>
+      <Styled.Content>
         <Styled.HeroHeading>Next generation digital banking</Styled.HeroHeading>
 
         <Styled.HeroText>

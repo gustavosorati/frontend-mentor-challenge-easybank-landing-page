@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Heading } from "../../../../components/Heading";
 import { Text } from "../../../../components/Text";
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
   background-color: #F4F5F7;
   padding: 4rem 2rem;
@@ -48,7 +48,10 @@ export const Description = styled(Text)`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   gap: 32px;
+  flex-wrap: wrap;
 
   @media (min-width: 376px) {
     max-width: 1440px;

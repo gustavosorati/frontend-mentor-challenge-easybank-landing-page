@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Heading } from "../../../../components/Heading";
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
   background-color: #fafafa;
   padding: 2rem;
@@ -29,8 +29,10 @@ export const HeadingArticle = styled(Heading)`
 export const ArticleSection = styled.section`
   @media (min-width: 376px){
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 2rem;
+
+    flex-wrap: wrap;
   }
 `
