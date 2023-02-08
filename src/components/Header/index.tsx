@@ -12,8 +12,6 @@ export function Header() {
     setIsActive((state) => !state);
   }
 
-  window.onresize = handleResizeScreen;
-
   const { innerWidth } = window;
   const [screenWidth, setScreenWidth] = useState(innerWidth > 768 ? true : false);
 
@@ -38,14 +36,7 @@ export function Header() {
           <a href="#">Careers</a>
         </Styled.Menu>
         
-        {screenWidth ? (
-          <Button>Request Invite</Button>
-        ) : (
-          <Close  
-            isActive={isActive}
-            onClick={changeVisibilyMenu}
-          />     
-        )}  
+       
         {screenWidth ? (
           <Button>Request Invite</Button>
         ) : (
