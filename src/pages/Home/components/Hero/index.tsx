@@ -8,7 +8,7 @@ export function Hero() {
 
   return (
     <Styled.Container>
-      <img src={mockup} />
+      <img src={mockup} alt="Imagem de 4 celulares" />
 
       <Styled.Content>
         <Styled.HeroHeading as="h1">Next generation digital banking</Styled.HeroHeading>

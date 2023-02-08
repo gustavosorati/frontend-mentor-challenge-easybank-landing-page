@@ -12,7 +12,7 @@ interface Props {
 export function Feature({id, author, title, description, image}: Props) {
   return (
     <Styled.Container data-aos="fade-up" data-aos-delay={100 * id}>
-      <img src={image} alt="" />
+      <img src={image} alt={title} />
       
       <Styled.Post>
         <Styled.Author>{author}</Styled.Author>
