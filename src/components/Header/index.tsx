@@ -7,16 +7,19 @@ import { Button } from '../Button';
 export function Header() {
   const [isActive, setIsActive] = useState(false);
   
+  
   function changeVisibilyMenu() {
     setIsActive((state) => !state);
   }
 
+  window.onresize = handleResizeScreen;
+
   const { innerWidth } = window;
-  const [screenWidth, setScreenWidth] = useState(innerWidth > 768 ? true : false);
+  const [screenWidth, setScreenWidth] = useState(innerWidth > 375 ? true : false);
 
   function handleResizeScreen() {
     const { innerWidth } = window;
-    const isDesktop = innerWidth > 768 ? true : false
+    const isDesktop = innerWidth > 375 ? true : false
     setScreenWidth(isDesktop)
   }
 
@@ -35,6 +38,14 @@ export function Header() {
           <a href="#">Careers</a>
         </Styled.Menu>
         
+        {screenWidth ? (
+          <Button>Request Invite</Button>
+        ) : (
+          <Close  
+            isActive={isActive}
+            onClick={changeVisibilyMenu}
+          />     
+        )}  
         {screenWidth ? (
           <Button>Request Invite</Button>
         ) : (
