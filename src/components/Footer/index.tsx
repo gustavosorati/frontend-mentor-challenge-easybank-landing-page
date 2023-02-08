@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <Styled.Container>
       <Styled.Content>
-        <img src={logoSvg} alt="" />
+        <img src={logoSvg} alt="easybank" />
 
         <Styled.Social>
           <img src="/icon-facebook.svg" alt="facebook" />
