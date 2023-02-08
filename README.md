@@ -20,6 +20,6 @@ This was the first project I started to develop mobile first, and it was an extr
 ### Links
 
 - Solution URL: [Repo Github](https://github.com/gustavosorati/frontendmentor-challenge-easybank-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Easybank landing page](https://frontend-mentor-easybank-landing-page.netlify.app)
 
 
