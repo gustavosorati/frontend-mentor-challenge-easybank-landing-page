@@ -15,11 +15,11 @@ export function Header() {
   window.onresize = handleResizeScreen;
 
   const { innerWidth } = window;
-  const [screenWidth, setScreenWidth] = useState(innerWidth > 375 ? true : false);
+  const [screenWidth, setScreenWidth] = useState(innerWidth > 768 ? true : false);
 
   function handleResizeScreen() {
     const { innerWidth } = window;
-    const isDesktop = innerWidth > 375 ? true : false
+    const isDesktop = innerWidth > 768 ? true : false
     setScreenWidth(isDesktop)
   }
 
